@@ -1,0 +1,50 @@
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.map-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+
+iframe {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}

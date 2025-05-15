@@ -1,0 +1,21 @@
+:root {
+  --themePrimary: #FDB515;
+  --themeSecondary: #F36C24;
+  --themeTertiary: #442817;
+  --dark100: rgb(51 51 51 / 1);
+  --dark80: rgb(51 51 51 / 0.8);
+  --light: #F3F3F3;
+  --primaryFont: 'Poppins', sans-serif;
+  --bordercolor: #706D6D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--primaryFont);
+  color: var(--dark100);
+}

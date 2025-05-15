@@ -1,0 +1,162 @@
+.egg-page-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.egg-page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.egg-page-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.egg-page-intro {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.egg-process-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.egg-process-container {
+    background-color: #FF7F27;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+.egg-process-step {
+    background-color: #FFC184;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.egg-step-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.egg-step-icon img {
+    max-width: 70px;
+    max-height: 70px;
+}
+
+.egg-step-content {
+    flex: 1;
+}
+
+.egg-step-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #8B4513;
+    margin-bottom: 10px;
+}
+
+.egg-step-description {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.egg-fun-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 40px 0 25px;
+    text-align: center;
+}
+
+.egg-birds-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.egg-bird-img {
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.egg-text-highlight {
+    color: #FF6600;
+    font-weight: bold;
+}
+
+.egg-hindi-text {
+    font-style: italic;
+    font-size: 16px;
+}
+
+.egg-impact-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.egg-impact-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.egg-impact-subtitle {
+    font-size: 22px;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+.egg-impact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.egg-impact-card {
+    width: 320px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    background-color: #fafafa;
+}
+
+.egg-impact-card img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.egg-impact-card h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.egg-impact-card p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+}

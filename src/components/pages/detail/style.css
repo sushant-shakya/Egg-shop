@@ -1,0 +1,57 @@
+/* Container */
+.detail-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+/* Description */
+.product-description {
+    font-size: 14px;
+    color: #666;
+    margin: 20px 0;
+    text-align: left;
+}
+
+/* Attributes (Radio Options) */
+.product-attributes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.product-attributes > div {
+    display: flex;
+    gap: 8px;
+}
+
+
+.product-attributes input[type="radio"] {
+    width: auto;
+}
+
+/* Quantity Input Field */
+.quantity-input {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.quantity-input label {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.quantity-input input {
+    padding: 6px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}

@@ -1,0 +1,29 @@
+.footer {
+    background-image: url('/footer-pic.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding-top: 160px;
+    padding-bottom: 60px;
+    position: relative;
+    margin-top: 20px;
+    min-height: 280px;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

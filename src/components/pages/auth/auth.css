@@ -1,0 +1,106 @@
+/* General Styling for Login Box */
+.loginbox {
+    margin: auto;
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: min(90%, 1000px);
+}
+
+/* Image Section */
+.loginimg {
+    flex: 1;
+}
+
+.loginimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Form Section */
+.loginform-section {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.loginform-section h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.loginform-section p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 2rem;
+}
+
+/* Form Inputs */
+.loginform-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.loginform-group input:focus {
+    border-color: var(--themePrimary);
+}
+
+/* Forgot Password Link */
+.loginform-group a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.loginform-group a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn-border {
+
+    
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    width: 100%;
+
+}
+
+/* Register Section */
+.loginregister {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+
+
+.loginregister a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.loginregister a:hover {
+    text-decoration: underline;
+}
+
+.auth-form {
+    display: grid;
+    gap: 16px
+}

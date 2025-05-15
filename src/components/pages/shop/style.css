@@ -1,0 +1,14 @@
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    color: #333;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
