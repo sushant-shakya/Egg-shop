@@ -18,8 +18,6 @@ const Login = () => {
     e.preventDefault();
 
     const myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("Cookie", "PHPSESSID=obvmsea7un8dto37sfbe5mp8q0");
 
     const raw = JSON.stringify(loginFormData);
 
@@ -27,13 +25,33 @@ const Login = () => {
       method: "POST",
       headers: myHeaders,
       body: raw,
-      redirect: "follow",
+      redirect: "follow"
     };
 
-    fetch("http://192.168.101.12:9900/api/rest/auth/login", requestOptions)
-      .then((response) => response.text())
-      .then((result) => console.log(result))
+    fetch("http://192.168.101.11:9900/api/rest/auth/login", requestOptions)
+      .then((response) => {
+        const token = response.headers.get("Authorization");
+        sessionStorage.setItem("Authorization", token);
+          console.log(token)
+         document.cookie = `PHPSESSID=${token}; path=/; HttpOnly;max-age=604800; SameSite=Lax`;
+      })
       .catch((error) => console.error(error));
+
+
+      setTimeout(() => {
+      
+         const value = "PHPSESSID="+sessionStorage.getItem("Authorization") ;
+         fetch("http://192.168.101.11:9900/api/rest/admin/users", {
+           method: "GET",
+           credentials: "include",
+           headers: {
+             "Cookie": value,
+           },
+         })
+           .then((response) => response.json())
+           .then((response) => console.log(response))
+           .catch((error) => console.error(error));
+      },5000)
   };
 
   return (
@@ -74,9 +92,7 @@ const Login = () => {
           <Button
             buttonlabel="Login"
             className="btn-border"
-            onClickHandler={() => {
-              handleSubmit(e);
-            }}
+            onClickHandler={handleSubmit}
             isButtonDisabled={isButtonDisabled}
           />
         </form>
