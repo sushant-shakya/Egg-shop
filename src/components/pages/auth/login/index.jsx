@@ -1,14 +1,19 @@
 import "../auth.css";
 import "./style.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../../../elements/button";
 import InputField from "../../../elements/inputField";
+import axios from "axios";
+import Cookies from "js-cookie";
 
 const Login = () => {
   let initialFormData = {
     email: "",
     password: "",
   };
+
+  const token = Cookies.get("token") || "";
+  const [bearerToken, setBearerToken] = useState(token || "");
 
   const [loginFormData, setLoginFormData] = useState(initialFormData);
 
@@ -25,34 +30,34 @@ const Login = () => {
       method: "POST",
       headers: myHeaders,
       body: raw,
-      redirect: "follow"
+      redirect: "follow",
     };
 
     fetch("http://192.168.101.11:9900/api/rest/auth/login", requestOptions)
       .then((response) => {
         const token = response.headers.get("Authorization");
         sessionStorage.setItem("Authorization", token);
-          console.log(token)
-         document.cookie = `PHPSESSID=${token}; path=/; HttpOnly;max-age=604800; SameSite=Lax`;
+        setBearerToken("token");
+        // Cookies.set("token", `PHPSESSID=${token};Path=/; HttpOnly`);
       })
       .catch((error) => console.error(error));
-
-
-      setTimeout(() => {
-      
-         const value = "PHPSESSID="+sessionStorage.getItem("Authorization") ;
-         fetch("http://192.168.101.11:9900/api/rest/admin/users", {
-           method: "GET",
-           credentials: "include",
-           headers: {
-             "Cookie": value,
-           },
-         })
-           .then((response) => response.json())
-           .then((response) => console.log(response))
-           .catch((error) => console.error(error));
-      },5000)
   };
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      await axios
+        .get("http://192.168.101.11:9900/api/rest/admin/users", {
+          withCredentials: true,
+        })
+        .then((response) => {
+          console.log(response);
+        });
+    };
+
+    if (bearerToken) {
+      fetchUserData();
+    }
+  }, [bearerToken]);
 
   return (
     <div className="loginbox">
